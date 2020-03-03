@@ -35,8 +35,6 @@
 			    </aside>
 				<h1>P<span style=color:#00ff00;text-transform:lowercase>I</span>-hole Pr<span style=color:#00ff00;text-transform:lowercase>I</span>vacy:</h1>
 			    <h3>Tamper<span style=color:#00ff00;text-transform:lowercase>I</span>ng <span style=color:#00ff00;text-transform:lowercase>I</span>s a Good Th<span style=color:#00ff00;text-transform:lowercase>I</span>ng</h3>
-			  </br>
-
 			  Jun<span style=color:#00ff00;text-transform:lowercase>I</span>or T<span style=color:#00ff00;text-transform:lowercase>I</span>dal</br><small>C<span style=color:#00ff00;text-transform:lowercase>I</span>ty Un<span style=color:#00ff00;text-transform:lowercase>I</span>vers<span style=color:#00ff00;text-transform:lowercase>I</span>ty of New York</small></br>
 			  Chad Clark</br><small>H<span style=color:#00ff00;text-transform:lowercase>I</span>ghland Park Publ<span style=color:#00ff00;text-transform:lowercase>I</span>c L<span style=color:#00ff00;text-transform:lowercase>I</span>brary</small></br>
 			  Bryan Ne<span style=color:#00ff00;text-transform:lowercase>I</span>l Jones</br><small>Nashv<span style=color:#00ff00;text-transform:lowercase>I</span>lle Publ<span style=color:#00ff00;text-transform:lowercase>I</span>c L<span style=color:#00ff00;text-transform:lowercase>I</span>brary</small>
@@ -47,7 +45,7 @@
 			<section>
 			  <!--PART 1 SLIDE 1.1-->
 
-				<section data-background="images/black-logo.png">
+				<section data-background="images/black-logo.png" data-transition="slide">
 				  <aside class="notes">
             If you say “privacy” everyone understands what you mean, but if you ask people to define privacy that’s when the party starts. Icebreaker--what’s your name, a hope and challenge in the context of privacy. Snowden, “Privacy is the right to a self.”
 			    </aside>
@@ -56,7 +54,7 @@
 				<p class="fragment fade-left"><b>What are our challenges?</b></p>
 				</section>
 
-			  <section data-transition="fade-in" data-background="images/black-logo.png">
+			  <section data-background="images/black-logo.png">
 				  <!--PART 1 SLIDE 1.2-->
 			    <aside class="notes">
 In 2014, Shoshana Zuboff coins the term ‘surveillance capitalism’.  This is when data is gathered about people in secret, or with there nominal consent. This data, or metadata about that data, is sold; or products are marketed using that data. Results: constant commercial surveillance, you think your phone is reading your mind, and what else?
@@ -223,44 +221,48 @@ When you visit a website, that website may have other content that is being load
 				  <aside class="notes">
 This is how Pi-Hole works. Your browser makes a request for a website. That request is sent to Pi-Hole. Pi-Hole as a DNS server has a list of pre-loaded known advertising URLs. It checks if the website you requested is also requesting data to be sent from the black-list of URLs. If so, it blocks that content and only serves what’s on the website.
 			    </aside>
-				  <h3>How's <span style=color:#00ff00;text-transform:lowercase>I</span>t work?</h3>
+				  <h4>How does <span style=color:#00ff00;text-transform:lowercase>I</span>t work?</h4>
 				  <img src="images/pi-hole-diagram.png"></img>
-				</section>
+	       	</section>
 
 	      <section data-background="images/black-logo.png">
 				  <!--PART 2 SLIDE 2.4.-->
 				  <aside class="notes">
-
+Your browser makes a request for a website. That request is sent to Pi-Hole.
 			    </aside>
-				  <h1></h1>
-				  <img src="images/pi-hole-logo2.png"></img>
+				  <h4>How does <span style=color:#00ff00;text-transform:lowercase>I</span>t work?</h4>
+				  <img src="images/pi-hole-diagram-1.png"></img>
 				</section>
 
 	      <section data-background="images/black-logo.png">
 				  <!--PART 2 SLIDE 2.5-->
 				  <aside class="notes">
-
+Pi-Hole as a DNS server has a list of pre-loaded known advertising URLs. It checks if the website you requested is also requesting data to be sent from the black-list of URLs.
 			    </aside>
-				  <h1></h1>
-				  <img src="images/pi-hole-logo2.png"></img>
+				  <h4>How does <span style=color:#00ff00;text-transform:lowercase>I</span>t work?</h4>
+				  <img src="images/pi-hole-diagram-2.png"></img>
 				</section>
 
 	      <section data-background="images/black-logo.png">
 				  <!--PART 2 SLIDE 2.6-->
 				  <aside class="notes">
-
+Content from black-list URLs are blocked. Only website content is served.
 			    </aside>
-				  <h1></h1>
-				  <img src="images/pi-hole-logo2.png"></img>
+				  <h4>How does <span style=color:#00ff00;text-transform:lowercase>I</span>t work?</h4>
+				  <img src="images/pi-hole-diagram-3.png"></img>
 				</section>
 
 	      <section data-background="images/black-logo.png">
 				  <!--PART 2 SLIDE 2.7-->
 				  <aside class="notes">
-
+We have Raspberry Pis that you can use to install a Pi-Hole and test it out using your device. This activity will involve installing Pi-Hole, connecting to the same network that the Pi-Hole lives on, updating your device’s DNS settings to the Pi-Hole IP, and testing to see if it works. You will also see how the Pi-Hole admin screen. This is all dependent on the hotel’s WiFi. We can also use a cell-phone tether to test this as well.
 			    </aside>
-				  <h1></h1>
-				  <img src="images/pi-hole-logo2.png"></img>
+				  <h3>Hands-on act<span style=color:#00ff00;text-transform:lowercase>I</span>v<span style=color:#00ff00;text-transform:lowercase>I</span>ty:</h3>
+				  <p class="fragment fade-left">Raspberry P<span style=color:#00ff00;text-transform:lowercase>I</span> Zero W connected to the <span style=color:#00ff00;text-transform:lowercase>I</span>nternet</p>
+	        <p class="fragment fade-left">Raspb<span style=color:#00ff00;text-transform:lowercase>I</span>an Buster L<span style=color:#00ff00;text-transform:lowercase>I</span>te <span style=color:#00ff00;text-transform:lowercase>I</span>nstalled on m<span style=color:#00ff00;text-transform:lowercase>I</span>croSD card</p>
+	        <p class="fragment fade-left">USB power supply</p>
+	        <p class="fragment fade-left">Smart router</p>
+	        <p class="fragment fade-left">Laptop to <span style=color:#00ff00;text-transform:lowercase>I</span>nterface with RP<span style=color:#00ff00;text-transform:lowercase>I</span>-Zero</p>
 				</section>
 
 	      <section data-background="images/black-logo.png">
@@ -335,16 +337,7 @@ Resources Continued
 <p align="left"><small>Zuboff, S. (2019). The age of surveillance capitalism. PublicAffairs.</small></p>
 				</section>
 
-	      <section data-background="images/black-logo.png">
-				  <!--PART 2 SLIDE X.X.-->
-				  <aside class="notes">
-
-			    </aside>
-				  <h1></h1>
-				  <img src="images/pi-hole-logo2.png"></img>
-				</section>
-
-		  </section>
+	   </section>
 
 			</div>
 		</div>
@@ -357,6 +350,7 @@ Resources Continued
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				hash: true,
+		    transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
