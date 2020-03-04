@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="css/theme/black2020.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -113,7 +113,7 @@ How does this digital tracking work? Cookies. Between April and August 2018, I v
 			    <aside class="notes">
 Dark patterns. This is when sites/services confuse you or shame you into giving away data.  They have confusing interfaces or they use ‘fear of missing out,’ or straight up deception to get you to make the choices they want. Here's an example from my own library. Other examples: 1)  ‘are you sure you don't want enable desktop notifications?’  2) resetting all your preferences between updates, 3) or an impossible long list of options.
 			    </aside>
-					<h4><span style=font-size:60px>dark patterns</span></h4>
+					<h2>dark patterns</span></h2>
 					<img src="images/darkpattern.png"></img>
 				</section>
 
@@ -258,47 +258,91 @@ Content from black-list URLs are blocked. Only website content is served.
 We have Raspberry Pis that you can use to install a Pi-Hole and test it out using your device. This activity will involve installing Pi-Hole, connecting to the same network that the Pi-Hole lives on, updating your device’s DNS settings to the Pi-Hole IP, and testing to see if it works. You will also see how the Pi-Hole admin screen. This is all dependent on the hotel’s WiFi. We can also use a cell-phone tether to test this as well.
 			    </aside>
 				  <h3>Hands-on act<span style=color:#00ff00;text-transform:lowercase>I</span>v<span style=color:#00ff00;text-transform:lowercase>I</span>ty:</h3>
-				  <p class="fragment fade-left">Raspberry P<span style=color:#00ff00;text-transform:lowercase>I</span> Zero W connected to the <span style=color:#00ff00;text-transform:lowercase>I</span>nternet</p>
-	        <p class="fragment fade-left">Raspb<span style=color:#00ff00;text-transform:lowercase>I</span>an Buster L<span style=color:#00ff00;text-transform:lowercase>I</span>te <span style=color:#00ff00;text-transform:lowercase>I</span>nstalled on m<span style=color:#00ff00;text-transform:lowercase>I</span>croSD card</p>
-	        <p class="fragment fade-left">USB power supply</p>
-	        <p class="fragment fade-left">Smart router</p>
-	        <p class="fragment fade-left">Laptop to <span style=color:#00ff00;text-transform:lowercase>I</span>nterface with RP<span style=color:#00ff00;text-transform:lowercase>I</span>-Zero</p>
+				  <p class="fragment fade-left"><b>Raspberry P<span style=color:#00ff00;text-transform:lowercase>I</span> Zero W connected to the <span style=color:#00ff00;text-transform:lowercase>I</span>nternet</b></p>
+	        <p class="fragment fade-left"><b>Raspb<span style=color:#00ff00;text-transform:lowercase>I</span>an Buster L<span style=color:#00ff00;text-transform:lowercase>I</span>te <span style=color:#00ff00;text-transform:lowercase>I</span>nstalled on m<span style=color:#00ff00;text-transform:lowercase>I</span>croSD card</b></p>
+	        <p class="fragment fade-left"><b>USB power supply</b></p>
+	        <p class="fragment fade-left"><b>Smartrouter</b></p>
+	        <p class="fragment fade-left"><b>Laptop to <span style=color:#00ff00;text-transform:lowercase>I</span>nterface with RP<span style=color:#00ff00;text-transform:lowercase>I</span>-Zero</b></p>
 				</section>
 
 	      <section data-background="images/black-logo.png">
 				  <!--PART 2 SLIDE 2.8-->
 				  <aside class="notes">
-
+First SSH into your Raspberry Pi.
+Default login usesh pi as the username and raspberry as the p/w
+Type in the command on the slide.
+This will start the installation process.
 			    </aside>
-				  <h1></h1>
-				  <img src="images/pi-hole-logo2.png"></img>
+				  <h3><span style=color:#00ff00;text-transform:lowercase>I</span>nstall<span style=color:#00ff00;text-transform:lowercase>I</span>ng P<span style=color:#00ff00;text-transform:lowercase>I</span>-hole</h3>
+	        <p class="fragment fade-left"><b>1) Boot up Raspberry P<span style=color:#00ff00;text-transform:lowercase>I</span></b></p>
+	        <p class="fragment fade-left"><b>2) SSH <span style=color:#00ff00;text-transform:lowercase>I</span>nto Raspberry P<span style=color:#00ff00;text-transform:lowercase>I</span></br>
+	        (user: <span style=color:#ee26d4><code>pi</code></span> | password: <span style=color:#ee26d4><code>raspberry</code></span>)</b></p>
+	        <p class="fragment fade-left"><b>3) Type: <span style=color:#ee26d4><code>curl -sSL https://install.pi-hole.net | bash</code></span></b>
 				</section>
 
 	      <section data-background="images/black-logo.png">
 				  <!--PART 2 SLIDE 2.9-->
 				  <aside class="notes">
-
+This is the configuration screen options you’ll select. Most of these are default.
 			    </aside>
-				  <h1></h1>
-				  <img src="images/pi-hole-logo2.png"></img>
+				  <h3>Conf<span style=color:#00ff00;text-transform:lowercase>I</span>gure</h3>
+	        <p class="fragment fade-left"><b>Select DNS upstream</b></p>
+          <p class="fragment fade-left"><b>Select <span style=color:#00ff00;text-transform:lowercase>I</span>Pv4 or <span style=color:#00ff00;text-transform:lowercase>I</span>Pv6</b></p>
+          <p class="fragment fade-left"><b>Conf<span style=color:#00ff00;text-transform:lowercase>I</span>gure <span style=color:#00ff00;text-transform:lowercase>I</span>P address</br>(self-ass<span style=color:#00ff00;text-transform:lowercase>I</span>gned--th<span style=color:#00ff00;text-transform:lowercase>I</span>s works most of the t<span style=color:#00ff00;text-transform:lowercase>I</span>me)</b></p>
+          <p class="fragment fade-left"><b><span style=color:#00ff00;text-transform:lowercase>I</span>nstall web <span style=color:#00ff00;text-transform:lowercase>I</span>nterface</b></p>
+          <p class="fragment fade-left"><b>Keep adm<span style=color:#00ff00;text-transform:lowercase>I</span>n password</b></p>
 				</section>
 
-	      <section data-background="images/black-logo.png">
+	  <section data-background="images/black-logo.png">
 				  <!--PART 2 SLIDE 2.10-->
 				  <aside class="notes">
-
+Once Pi-Hole has been configured, visit the Raspberry Pi’s IP. with /admin . You should see the Pi-Hole administration screen.
 			    </aside>
-				  <h1>Q & A</h1>
-				  <img src="images/pi-hole-logo2.png"></img>
+				  <h2>Test P<span style=color:#00ff00;text-transform:lowercase>I</span>-hole</h2>
+				  <p><b>Go to:</br>
+	        <span style=color:#ee26d4><code>http://</code></span>[your raspberry p<span style=color:#00ff00;text-transform:lowercase>I</span>'s <span style=color:#00ff00;text-transform:lowercase>I</span>P]<span style=color:#ee26d4>/admin</code></span></b>
+				</section>
+
+	  <section data-background="images/black-logo.png">
+				  <!--PART 2 SLIDE 2.11-->
+				  <aside class="notes">
+If you see the Pi-hole admin website, Pi-hole is installed, but does it work? Change the DNS settings on your device to the IP address of Pi-Hole to see if it works.
+			    </aside>
+				  <h3>Us<span style=color:#00ff00;text-transform:lowercase>I</span>ng P<span style=color:#00ff00;text-transform:lowercase>I</span>-hole</h3>
+          <p class="fragment fade-left"><b>Change the DNS server on your dev<span style=color:#00ff00;text-transform:lowercase>I</span>ce</br> to the <span style=color:#00ff00;text-transform:lowercase>I</span>P address of P<span style=color:#00ff00;text-transform:lowercase>I</span>-hole</b></p>
+          <p class="fragment fade-left"><b>OR</b></br>
+          <b>Update the DNS server on your router</br> to the <span style=color:#00ff00;text-transform:lowercase>I</span>P address of the P<span style=color:#00ff00;text-transform:lowercase>I</span>-hole</b></p>
+          <p class="fragment fade-left"><b>THEN</b></br>
+          <b>V<span style=color:#00ff00;text-transform:lowercase>I</span>s<span style=color:#00ff00;text-transform:lowercase>I</span>t a webs<span style=color:#00ff00;text-transform:lowercase>I</span>te</b></p>
 				</section>
 
 	      <section data-background="images/black-logo.png">
-				  <!--PART 2 SLIDE 2.11-->
+				  <!--PART 2 SLIDE 2.12-->
+				  <aside class="notes">
+Pi-Hole is just one tech solution that we can use to better safeguard users’ privacy against the many problems that we have talked about today. Most importantly, it can block unwanted ads, tracking, and can be used to block a range of devices at the network level and not just a single device.
+			    </aside>
+				  <h3>Wrapp<span style=color:#00ff00;text-transform:lowercase>I</span>ng Up</h3>
+          <p class="fragment fade-left"><b>L<span style=color:#00ff00;text-transform:lowercase>I</span>brar<span style=color:#00ff00;text-transform:lowercase>I</span>es can use P<span style=color:#00ff00;text-transform:lowercase>I</span>-hole to protect patron pr<span style=color:#00ff00;text-transform:lowercase>I</span>vacy by blocking <span style=color:#00ff00;text-transform:lowercase>I</span>nternet ads, track<span style=color:#00ff00;text-transform:lowercase>I</span>ng, and mal-ware.</b>
+	        <p class="fragment fade-left"><b><span style=color:#00ff00;text-transform:lowercase>I</span>t can reduce bandw<span style=color:#00ff00;text-transform:lowercase>I</span>dth because</br> <span style=color:#00ff00;text-transform:lowercase>I</span>t <span style=color:#00ff00;text-transform:lowercase>I</span>s not load<span style=color:#00ff00;text-transform:lowercase>I</span>ng ads.</b>
+	        <p class="fragment fade-left"><b><span style=color:#00ff00;text-transform:lowercase>I</span>t can block ads on many dev<span style=color:#00ff00;text-transform:lowercase>I</span>ces at once</br> <span style=color:#00ff00;text-transform:lowercase>I</span>nclud<span style=color:#00ff00;text-transform:lowercase>I</span>ng phones and TVs.</b>
+				</section>
+
+	      <section data-background="images/black-logo.png">
+				  <!--PART 2 SLIDE 2.13-->
+				  <aside class="notes">
+Questions
+			    </aside>
+				  <h1>Q & A</h1>
+	        <img src="images/pi-hole-logo2.png"></img>
+				</section>
+
+	      <section data-background="images/black-logo.png">
+				  <!--PART 2 SLIDE 2.14-->
 				  <aside class="notes">
 Resources
 			    </aside>
 				  <h3>Resources</h3>
-				  <p align="left" align="left"><small>ACLU (2019, Jun. 3) Coalition letter calling for a federal moratorium on face recognition. ACLU. Retrieved from https://www.aclu.org/letter/coalition-letter-calling-federal-moratorium-face-recognition</small></p>
+				  <p align="left"><small>ACLU (2019, Jun. 3) Coalition letter calling for a federal moratorium on face recognition. ACLU. Retrieved from https://www.aclu.org/letter/coalition-letter-calling-federal-moratorium-face-recognition</small></p>
 
 <p align="left"><small>Beadon, L. (Producer). (2019, Dec. 3). Techdirt podcast episode 233: Your secret consumer score [Audio podcast]. https://www.techdirt.com/articles/20191203/12402743497/techdirt-podcast-episode-233-your-secret-consumer-score.shtml.</small></p>
 
@@ -310,7 +354,7 @@ Resources
 </section>
 
 	      <section data-background="images/black-logo.png">
-				  <!--PART 2 SLIDE 12-->
+				  <!--PART 2 SLIDE 2.15-->
 				  <aside class="notes">
 Resources Continued
 			    </aside>
@@ -327,7 +371,7 @@ Resources Continued
 				</section>
 
 	      <section data-background="images/black-logo.png">
-				  <!--PART 2 SLIDE 2.13-->
+				  <!--PART 2 SLIDE 2.15-->
 				  <aside class="notes">
 Resources Continued
 			    </aside>
@@ -335,6 +379,26 @@ Resources Continued
 				  <p align="left"><small>Simonite, and T. Barber, G. (2019, Oct. 17). The delicate ethics of using facial recognition in schools. Wired, Retrieved from https://www.wired.com/story/delicate-ethics-facial-recognition-schools/.</small></p>
 
 <p align="left"><small>Zuboff, S. (2019). The age of surveillance capitalism. PublicAffairs.</small></p>
+				</section>
+
+	      <section data-background="images/black-logo.png">
+				  <!--PART 2 SLIDE 2.16-->
+				  <aside class="notes">
+Resources Continued
+			    </aside>
+				  <h3>Resources Cont<span style=color:#00ff00;text-transform:lowercase>I</span>nued</h3>
+				  <p align="left"><small>Simonite, and T. Barber, G. (2019, Oct. 17). The delicate ethics of using facial recognition in schools. Wired, Retrieved from https://www.wired.com/story/delicate-ethics-facial-recognition-schools/.</small></p>
+
+<p align="left"><small>Zuboff, S. (2019). The age of surveillance capitalism. PublicAffairs.</small></p>
+				</section>
+
+	        <section data-background="images/black-logo.png">
+				  <!--PART 2 SLIDE 2.17-->
+				  <aside class="notes">
+Thanks!
+			    </aside>
+				  <h1>Thanks!</h1>
+	        <img src="images/pi-hole-logo2.png"></img>
 				</section>
 
 	   </section>
@@ -354,7 +418,7 @@ Resources Continued
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/highlight/highlight.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
